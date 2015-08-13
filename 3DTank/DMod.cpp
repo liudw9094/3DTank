@@ -1,0 +1,256 @@
+#include "stdafx.h"
+#include "Util.h"
+#include "DMod.h"
+
+
+#ifndef NULL
+	#define NULL 0
+#endif
+#define FILE_FREME			0x01 //Frame
+#define FILE_VECTORS		0x02 //Vectors and Normals
+#define FILE_FACES			0x03 //Faces
+#define FILE_MATRIX		0x04 //Matrix
+#define FILE_MATERIALID		0x05 //Material
+#define FILE_TEXTUREVERTEX	0x0a //Texture vertex
+
+//0x00 NULL, 0x01 Frame, 0x02 Vectors,0x03 Faces,0x04 Matrix,0x05 Material
+
+////0x06 Diffuse Map , 0x07 Specular Map ,0x08 Bump Map,0x09 Displacement Map
+
+//0x0a Texture vertex ,
+
+
+
+
+void MyVector::Create( DWORD Con )
+{ 
+	if(Con && !m_Vectors)
+	{
+		m_Vectors = new D3DVECTOR[Con];
+		m_count = Con;
+	}
+}
+
+
+void MyFaces::Create( DWORD Con )
+{ 
+	if(Con && !m_Faces && !m_TVFaces)
+	{
+		m_Faces = new Face[Con];
+		m_TVFaces = new Face[Con];
+		m_count = Con;
+	}
+}
+
+void MyTextureVec::Create( DWORD Con )
+{ 
+	if(Con && !m_TextureVecs)
+	{
+		m_TextureVecs = new TextureVec[Con];
+		m_count = Con;
+	}
+}
+
+
+bool MyModel::GetMaterial(FILE *hfile)
+{
+	DWORD count;
+	fread ( &count, sizeof( DWORD ), 1, hfile );
+	if(count && !m_pMaterial)
+	{
+		m_MaterialCount = count;
+		if(m_pMaterial = new DMODMATERIAL[count] )
+		{
+			DWORD k;
+			for( k = 0; k < count; k++ )
+			{
+				fread( &m_pMaterial[k] ,sizeof( D3DMATERIAL9 ),1,hfile);
+				if(!GetTexture( hfile , k ))
+					return false;
+			}
+		}
+		else 
+		{
+			m_MaterialCount = 0;
+			return false;
+		}
+	}
+	return true;
+}
+bool MyModel::Create( char * FilePath )
+{
+	char head[] = "DMod";
+	char buf[1024];
+
+	FILE* hFile;
+
+	
+	hFile = fopen( FilePath ,"rb");
+	if(!hFile)
+	{
+		char strerr[256];
+		sprintf( strerr, "Failed in opening file \"%s\" !\n", FilePath );
+		MessageBoxEx( strerr );
+		return false;
+	}
+	fread(buf,1,5,hFile);
+	
+	if(strcmp(buf,head))
+	{
+		MessageBoxEx("Head Error!\n");
+		return false;
+	}
+	GetMaterial( hFile );
+	fread( &m_FrameCount ,sizeof(DWORD),1,hFile );
+	m_Frames = new Myframe[ m_FrameCount ];
+	if(!m_Frames)
+	{
+		MessageBoxEx("Out of memory!\n");
+		return false;
+	}
+	bool result = GetNext( hFile );
+	fclose(hFile);
+	return result;
+}
+bool MyModel::GetNext( FILE *hfile ,DWORD temp )
+{
+
+
+	DWORD m_temp = temp;
+
+	BYTE sty;
+	fread(&sty,1,1,hfile);
+
+
+	if (feof(hfile))
+		return true;
+
+	bool result = false;
+	DWORD i = (DWORD)-1;
+
+	DWORD con;
+
+	char buffer;
+	switch(sty)
+	{
+	case NULL:
+		break;
+	case FILE_FREME:
+		m_temp++;
+		//if( m_temp == 20 )
+		//MessageBox( NULL," ","",NULL);
+		i=-1;
+		do{
+			i++;
+			fread( &buffer,1,1,hfile);
+			if( i < 255 )
+				m_Frames[m_temp].name[i] = buffer;
+			else
+			{
+				m_Frames[m_temp].name[255] = '\0';
+				break;
+			}
+		}while(buffer!=0x00);
+
+		break;
+	case FILE_VECTORS:
+		fread(&con,sizeof(DWORD),1,hfile);//得到点数
+		//得到VECTOR
+		m_Frames[m_temp].m_Vector.Create(con);
+		for( i = 0; i<con; i++)
+		{
+
+			fread(&(m_Frames[m_temp].m_Vector.m_Vectors[i]),sizeof(D3DVECTOR),1,hfile);
+
+		}
+		//得到NORMAL
+		m_Frames[m_temp].m_Normal.Create(con);
+		for( i = 0; i<con; i++)
+		{
+			fread(&(m_Frames[m_temp].m_Normal.m_Vectors[i]),sizeof(D3DVECTOR),1,hfile);
+
+		}
+		break;
+	case FILE_FACES:
+		fread(&con,sizeof(DWORD),1,hfile);
+		m_Frames[m_temp].m_Face.Create(con);
+		for( i = 0; (DWORD)i<con; i++)
+		{
+			fread(&(m_Frames[m_temp].m_Face.m_Faces[i]),sizeof(Face),1,hfile);//得到面
+			fread(&(m_Frames[m_temp].m_Face.m_TVFaces[i]),sizeof(Face),1,hfile);//得到TextureIndex
+		}
+		break;
+	case FILE_MATRIX:
+		fread(&(m_Frames[m_temp].m_Transform),sizeof( D3DMATRIX ),1,hfile);
+		break;
+	case FILE_MATERIALID:
+		DWORD count;
+		fread ( &count, sizeof( DWORD ), 1, hfile );
+		if(count)
+		{
+			m_Frames[m_temp].m_MaterialCount = count;
+			if( m_Frames[m_temp].m_pMaterialID = new DWORD[count] )
+			{
+				DWORD k;
+				for( k = 0; k < count; k++ )
+				{
+					fread( &( m_Frames[m_temp].m_pMaterialID[k] ),sizeof( DWORD ),1,hfile);
+				}
+			}
+		}
+		else
+		{
+			m_Frames[m_temp].m_MaterialCount = 1;
+			m_Frames[m_temp].m_pMaterialID = new DWORD;
+			m_Frames[m_temp].m_pMaterialID = 0;
+		}
+		break;
+
+	case FILE_TEXTUREVERTEX:
+		fread(&con,sizeof(DWORD),1,hfile);
+		m_Frames[m_temp].m_TextureVec.Create(con);
+		for( i = 0; i<con; i++)
+		{
+			fread(&(m_Frames[m_temp].m_TextureVec.m_TextureVecs[i]),sizeof(TextureVec),1,hfile);
+
+		}
+		break;
+
+	default:
+		char strerr[256];
+		sprintf(strerr, "Unknowing code: %x\n", sty);
+		MessageBoxEx( strerr );
+		return false;
+	}
+	return GetNext( hfile ,m_temp );
+}
+bool MyModel::GetTexture( FILE *hFile , DWORD MaterialIndex )
+{
+	char buf[256];
+	int i,j;
+
+	for( j = 0; j < 4; j++ )
+	{
+		i=-1;
+		do{
+			i++;
+			fread(&buf[i],1,1,hFile);
+		}while(buf[i]!=0x00);
+		*(&(m_pMaterial[MaterialIndex].m_DiffuseMap) + j ) = 
+			GetTextureFromFile( buf, j + 0x06  );
+	}
+
+	return true;
+
+}
+
+void MyModel::Release()
+{
+	if(m_Frames)
+		SAFE_DELETE_ARRAY( m_Frames );
+	if(m_pMaterial)
+		SAFE_DELETE_ARRAY( m_pMaterial );
+	m_FrameCount = m_MaterialCount = 0;
+	m_Frames = NULL;
+	m_pMaterial = NULL;
+}

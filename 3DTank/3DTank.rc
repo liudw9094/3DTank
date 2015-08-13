@@ -1,0 +1,333 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MY3DTANK            ICON                    "3DTank.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_MY3DTANK MENU 
+BEGIN
+    POPUP "游戏(&G)"
+    BEGIN
+        MENUITEM "新游戏(&N)\tF2",                 IDM_NEW
+        MENUITEM "全屏(&F)\tAlt + Enter",         IDM_FULLSCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)\tAlt + F4",            IDM_EXIT
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于(&A) ...\tF1",              IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_MY3DTANK ACCELERATORS 
+BEGIN
+    "/",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "?",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    VK_F1,          IDM_ABOUT,              VIRTKEY, NOINVERT
+    VK_F2,          IDM_NEW,                VIRTKEY, NOINVERT
+    VK_RETURN,      IDM_FULLSCREEN,         VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 299, 225
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    CONTROL         129,IDC_MYICON,"Static",SS_BITMAP,7,6,171,152
+    LTEXT           "3DTank 1.2.1 版",IDC_STATIC,185,7,61,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,185,18,69,8
+    DEFPUSHBUTTON   "确定",IDOK,239,193,42,27,WS_GROUP
+    CTEXT           "操作说明",IDC_STATIC,185,35,89,8
+    LTEXT           "C: \t切换视角模式\n\n--------操作模式--------\n\nW:\t\t上\nA:\t\t左\nS:\t\t下\nD:\t\t右\n空格:\t\t发射\n\n------自由观察模式------\n\nW:\t\t前进\nA:\t\t左\nS\t\t后退\nD\t\t右\n鼠标移动:\t观察角度",IDC_STATIC,185,48,101,137
+    EDITTEXT        IDC_CREDIT,9,159,169,61,ES_MULTILINE | ES_NOHIDESEL | ES_READONLY | WS_VSCROLL
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        RIGHTMARGIN, 293
+        BOTTOMMARGIN, 220
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TANK                BITMAP                  "m1a1_changed_256x256.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,1,0
+ PRODUCTVERSION 1,2,1,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "Created by Liu Dw."
+            VALUE "CompanyName", "双术工作室 ( Double Software )"
+            VALUE "FileDescription", "3D Tank Game"
+            VALUE "FileVersion", "1, 2, 1, 0"
+            VALUE "InternalName", "3DTank"
+            VALUE "LegalCopyright", "Copyright (C) 2009"
+            VALUE "OriginalFilename", "3DTank.exe"
+            VALUE "ProductName", "3D Tank Game"
+            VALUE "ProductVersion", "1, 2, 1, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "3DTank"
+    IDS_CREDIT              "\t\t版权声明\r\n　　本游戏为免费软件，您有权在非商业目的范围内制作并传播本游戏的复本。作者保留本游戏部分版权所有，请在传播游戏复本的同时请保证游戏的完整性。\r\n　　本游戏最终解释权归作者刘大卫所有，作者本人不会对本游戏可能产生的任何后果负责。\r\n"
+    IDC_MY3DTANK            "MY3DTANK"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_MY3DTANK MENU 
+BEGIN
+    POPUP "&Game"
+    BEGIN
+        MENUITEM "&New Game\tF2",               IDM_NEW
+        MENUITEM "&Full Screen\tAlt + Enter",   IDM_FULLSCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt + F4",             IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...\tF1",              IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 307, 226
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 9, "??", 0, 0, 0x0
+BEGIN
+    CONTROL         129,IDC_MYICON,"Static",SS_BITMAP,7,6,171,152
+    LTEXT           "3DTank Version 1.2.1",IDC_STATIC,185,6,81,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,185,18,73,8
+    DEFPUSHBUTTON   "OK",IDOK,239,194,42,27,WS_GROUP
+    CTEXT           "Control",IDC_STATIC,185,35,102,8
+    LTEXT           "C: \tSwitch view mode\n\n-----Control mode-----\n\nW:\t\tUp\nA:\t\tLeft\nS:\t\tDown\nD:\t\tRight\nSpace:\t\tFire\n\n-----Free view mode-----\n\nW:\t\tZoom in\nA:\t\tLeft\nS\t\tZoom out\nD\t\tRight\nMouse move:\tView angle",IDC_STATIC,182,48,119,137
+    EDITTEXT        IDC_CREDIT,9,160,169,61,ES_MULTILINE | ES_NOHIDESEL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        RIGHTMARGIN, 301
+        BOTTOMMARGIN, 221
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,1,0
+ PRODUCTVERSION 1,2,1,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Created by Liu Dw."
+            VALUE "CompanyName", "Double Software"
+            VALUE "FileDescription", "3D Tank Game"
+            VALUE "FileVersion", "1, 2, 1, 0"
+            VALUE "InternalName", "3DTank"
+            VALUE "LegalCopyright", "Copyright (C) 2009"
+            VALUE "OriginalFilename", "3DTank.exe"
+            VALUE "ProductName", "3D Tank Game"
+            VALUE "ProductVersion", "1, 2, 1, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "3DTank"
+    IDS_CREDIT              "\t\tCopyright Notices\r\n  This game is free program. You have the rights to copy this game only with non-commercial purposes. Some parts of copyrights were reserved, please ensure the integrity of this game when you copy or disseminate this game.\r\n  The rights of final interpretation is reserved by creator Liu Dw., and the creator himself wouldn't be responsible for any blame by this game.\r\n"
+    IDC_MY3DTANK            "MY3DTANK"
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

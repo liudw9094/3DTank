@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="CApplication">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgKKAAYDNCIIGBxUAkAAKAFCSBCUigOJAAChAYIgY=</HashCode>
+      <FileName>Application.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBombControl">
+    <Position X="4.75" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBCAMgASAABAEAIAGAACAAAABAACAEAAJQAAAFAIBQ=</HashCode>
+      <FileName>BombControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTextureArray">
+    <Position X="2.75" Y="32.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAACAIAAAAAAAAAEgAAAAAAAAEAAAgAAABQAAAA=</HashCode>
+      <FileName>C3DTankModel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="C3DTankModel">
+    <Position X="20" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAIAAAACABBAAApAAAACAAAQAAEANABAAIBACACA=</HashCode>
+      <FileName>C3DTankModel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CCamera">
+    <Position X="0.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQABAAAAgIAAAgAAAAQAAAoCCAIgEAQCACAgIABgAY=</HashCode>
+      <FileName>Camera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyTextureVec">
+    <Position X="26" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAAABAQgAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyVector">
+    <Position X="2.75" Y="36" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIIAAAAAAAEAgAAAAAAQAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyFaces">
+    <Position X="6.5" Y="38.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAQAAAAEAAAAAAAEAAAACAAAQAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Myframe">
+    <Position X="4.75" Y="36" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAIgQAAAAAAAAAQQIAAAAAEAAAAQAAAAEAAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyModel">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgCAAEAAAAAQBAQAIAAAAAABEIAAAAAABAAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CGame">
+    <Position X="26" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>aBCgIBEIhi2RgKDAQQIdMQCFiAgBceCBGxIGENBAOAI=</HashCode>
+      <FileName>Game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CHeightMap">
+    <Position X="0.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhQEAIAAIAAAAAABAAAAAADAAAQAAEiAAhAAAFBAAAA=</HashCode>
+      <FileName>HeightMap.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMap">
+    <Position X="6.5" Y="29.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBAABMACAIEABABAAgAAAUCAAQQEAEAEABAEABAAABA=</HashCode>
+      <FileName>HeightMap.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDShow">
+    <Position X="4.75" Y="32" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgAAAAEAAAAEIAIAAAAAABBAAAAEAQoAAAAAAAAAA=</HashCode>
+      <FileName>mydshow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWave">
+    <Position X="22.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACQAAgAACIAAACAAICBAAAQQgAAAEAAAEAAAJAAAAA=</HashCode>
+      <FileName>MyDSound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDSoundBuffer">
+    <Position X="24.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AooxAAACACoAAAACAICBAAgEIgCACACAoEAAAIAgAAI=</HashCode>
+      <FileName>MyDSound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDSoundInstance">
+    <Position X="6.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAgEAIAAAAAAAAAAAAAACQAAAAgAAAAEI=</HashCode>
+      <FileName>MyDSound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSoundMannager">
+    <Position X="20" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAggQAAAgCAQAAAIAgAABAAEQEAAAQAAAEAAAJAAAAA=</HashCode>
+      <FileName>MyDSound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTankControl">
+    <Position X="2.75" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QRRYCARALkCAgIIECAEQmRGogAEBSAQAdBAABAQQIAg=</HashCode>
+      <FileName>TankControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CCriticalSection">
+    <Position X="6.5" Y="35.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAUAAAAAAAAABAAAAAAAIAAAAAAAAAACQACABAAAAA=</HashCode>
+      <FileName>Util.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLock">
+    <Position X="4.75" Y="30" Width="1.5" />
+    <NestedTypes>
+      <Typedef Name="CLock::m_tCS" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Util.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Util.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIL_ARRAY&lt;type&gt;">
+    <Position X="6.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAgCAAAAAAJQAAAAAAAAEAAQgAAAAAABAAAAA=</HashCode>
+      <FileName>Util.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="_D3DTLVERTEX">
+    <Position X="24.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAIAAAAAEAAAAAAAQA=</HashCode>
+      <FileName>C3DTankModel.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="_Tex">
+    <Position X="24.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>C3DTankModel.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="_MYMATERIAL">
+    <Position X="24.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAAAAAhAAACAAgAAAAAAAAAAAAABAAAQAEAAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="fa">
+    <Position X="0.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAEAAAACAAAAAAAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="_TextureVec">
+    <Position X="20" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAQA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="VERTEX_2DPIONT">
+    <Position X="2.75" Y="38.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAEQAAAAAAAA=</HashCode>
+      <FileName>Game.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="HEIGHT_VERTEX">
+    <Position X="6.5" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEQAAAAAAAA=</HashCode>
+      <FileName>HeightMap.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="VERTEX2D">
+    <Position X="4.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAEQAAAAAAAA=</HashCode>
+      <FileName>HeightMap.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SKY_VERTEX">
+    <Position X="0.5" Y="34.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAQAAAQA=</HashCode>
+      <FileName>HeightMap.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="HEIGHT_INDEX">
+    <Position X="4.75" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAEAAAACAAAAAAAAAA=</HashCode>
+      <FileName>HeightMap.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Vector2D">
+    <Position X="0.5" Y="37" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAQAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>TankControl.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="D3DTLVERTEX" Collapsed="true">
+    <Position X="24.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C3DTankModel.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MyTexture" Collapsed="true">
+    <Position X="24.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C3DTankModel.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DMODMATERIAL" Collapsed="true">
+    <Position X="24.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Face" Collapsed="true">
+    <Position X="0.5" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPFACE" Collapsed="true">
+    <Position X="0.5" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPTEXTUREVEC" Collapsed="true">
+    <Position X="20" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="TextureVec" Collapsed="true">
+    <Position X="20" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DMod.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPLPCWAVE" Collapsed="true">
+    <Position X="22.25" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyDSound.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPCWAVE" Collapsed="true">
+    <Position X="22.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyDSound.h</FileName>
+    </TypeIdentifier>
+    <AliasOfLine Type="CWave" FixedToPoint="true">
+      <Path>
+        <Point X="23" Y="14.25" />
+        <Point X="23" Y="14.153" />
+        <Point X="23.062" Y="14.153" />
+        <Point X="23.062" Y="14.059" />
+      </Path>
+    </AliasOfLine>
+  </Typedef>
+  <Typedef Name="LPLPCDSOUNDBUFFER" Collapsed="true">
+    <Position X="24.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyDSound.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPCDSOUNDBUFFER" Collapsed="true">
+    <Position X="24.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyDSound.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="3DTank">
+</Property><Property Name="解决方案文件" Value="D:\aas\3DTank\3DTank.sln">
+</Property><Property Name="Date" Value="2010年11月2日">
+</Property><Property Name="Time" Value="19:15">
+</Property><Property Name="日志号" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="3DTank" Source="3DTank\3DTank.vcproj" Description="Converting project file 'D:\aas\3DTank\3DTank\3DTank.vcproj'.">
+</Event><Event ErrorLevel="1" Project="3DTank" Source="3DTank\3DTank.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="3DTank" Source="3DTank\3DTank.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="3DTank" Source="3DTank\3DTank.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="3DTank" Source="3DTank\3DTank.vcproj" Description="Done converting to new project file 'D:\aas\3DTank\3DTank\3DTank.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="3DTank" Source="3DTank\3DTank.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="3DTank.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="3DTank.sln" Description="Converted">
+</Event></UpgradeLog>

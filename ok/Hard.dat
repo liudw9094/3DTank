@@ -1,0 +1,29 @@
+[3DTank]
+ModelDir = ".\model"
+MapDir = ".\map"
+HeightMapDir = ".\map\heightmap"
+ModelTextureDir = ".\texture\model"
+MapTextureDir = ".\texture\map"
+MissionCfg = ".\mission.ini"
+SoundDir = ".\Sound"
+SoundEnable = 1
+TeamCount = 2
+TeamTextureDir = ".\Texture\Team"
+TeamTextureFile = "%d.png"
+EnemyHP = 50
+PlayerHP = 100
+EnemyHit = 15
+PlayerHit = 25
+Speed = 10
+Font = "宋体"
+HP = "HP:"
+FPS = "FPS:"
+EnemyNum = "敌方坦克数量:"
+Loading = "游戏加载中"
+SmartAI = 1
+[Video]
+StartLogo = ".\PersonalWork.avi"
+WinVideo = ".\GameFinished.avi"
+Width = 800
+Height = 600
+Fullscreen = 0
